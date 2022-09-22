@@ -1,0 +1,28 @@
+cd /opt/mapr/sqoop/sqoop-2.0.0/bin/
+./sqoop2-shell
+/opt/mapr/sqoop/sqoop-2.0.0
+
+
+
+sqoop import --connect jdbc:netezza://host_ip/database --table tableName --username userName --password password --hive-import --hive-database DatabaseName --create-hive-table --hive-table tableName -m 1
+
+
+
+
+
+
+$ sqoop import --connect jdbc:netezza://172.20.22.67:5480/RETAIL --username HIVE_USER --password $eb!@Hive --hive-import --hive-database sebi_prod --create-hive-table -m 1
+Warning: /usr/hdp/2.5.0.0-1245/accumulo does not exist! Accumulo imports will fail.
+...
+...
+Time taken: 0.843 seconds
+Note: /tmp/sqoop-impadmin/compile/363c30ac0559f7783dd473977a3d71ca/WEB_SALES.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+Logging initialized using configuration in jar:file:/usr/hdp/2.5.0.0-1245/hive/lib/hive-common-1.2.1000.2.5.0.0-1245.jar!/hive-log4j.properties
+OK
+Time taken: 0.423 seconds
+Loading data to table vithal_test.web_sales
+Table vithal_test.web_sales stats: [numFiles=1, numRows=0, totalSize=402, rawDataSize=0]
+OK
+Time taken: 0.912 seconds
