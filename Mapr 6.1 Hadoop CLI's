@@ -1,0 +1,134 @@
+jps	___________current running application 
+rpm -qa | grep lftp___________	to check file 
+netstat -na grep 22___________	port check
+sftp -o Port=6010 sebisftp@172.20.106.23:/data3	Sftp command
+ifconfig | less_____________	to check Ip adderess
+pcs status______________	to check  cluster node is running
+ps uax |grep -i   _________   mapr	to check services is running
+iptables -L__________	to check a command line interface used to set up and maintain tables for the Netfilter firewall for ipv4
+service sshd status ________	to check the services status
+getenforce	a Linux Commnand for quick confirmation of the current SELinux mode
+	
+jps__________	current running application 
+rpm -qa | grep lftp_________	to check file 
+netstat -na grep 22	__________port check
+sftp -o Port=6010 sebisftp@172.20.106.23:/data3	_________Sftp command
+ifconfig | less_____	to check Ip adderess
+pcs status_________	to check  cluster node is running
+ps uax |grep -i  __________    mapr	to check services is running
+iptables -L __________	to check a command line interface used to set up and maintain tables for the Netfilter firewall for ipv4
+service sshd status	__________to check the services status
+getenforce	a Linux Commnand for quick confirmation of the current SELinux mode
+ifdown bond0	_________ bond down 
+ifup bond0	________bond up
+df -h _________	to check partition
+route -n	_______ip route command display ip tables
+du -sh _________	to check size of folder
+showmount -e	____to check mounted  
+ip a 	____________to check Ip adderess
+df -kh	___________to check partition size
+hadoop fs -df	_______to verify total size percentage
+mount localhost:/mapr /mapr_________	how to mount command
+maprcli node cldbmaster	__________to check cldb node
+maprcli node list -columns hostname,id	_______to check hostname and id
+maprcli volume list -columns volumnename	_____________to check volumename
+maprcli virtualip list___________	to check virtula ip
+maprcli volume list	_______to check voulme
+maprcli node list___________	to check node
+maprcli dump balancerinfo -json	___________to check Balancerinfo
+maprcli config load .json	__________to check config file
+/opt/mapr/server/mrconfig sp list -v	______________to check storage pool  status
+maprcli node list -columns id,svc,racktopo	to check node list
+rpm -qa|grep mapr	to check mapr services intsalled 
+maprcli node cldbmaster	to check cldb node
+maprcli node heatmap	to check 
+ hadoop fs -du -h  /path	to check particular folder size 
+ hadoop fs -du /mapr/Prod.Sebi.Gov.In/Data_Load/FACT_ORDERS/082021_fact_orders	to check file wise size in folder
+service mapr-warden status	to check services is running
+service mapr-zookeeper status	to check services is running
+systemctl status pacemaker	to check  cluster is running
+systemctl status pcsd	
+netstat -tunlp |grep 8443	to check any port is running
+for i in {22..28}; do ssh 10.102.20.${i} systemctl restart mapr-warden; done	through one command run multiple node warden service
+find . -name *.pid	how to search a file
+ls -l pid	to check link pid 
+systemctl restart network.service	If ping not get  restart the service 
+mv VM\ Periodic\ Tas.core.46478.spcdcsvrdnp01.sebi.gov.in  /mapr/Prod.Sebi.Gov.In/Data_Load/cores	how to move core files via mv
+ps uax |grep java |less	to check services is running
+ps uax |grep infa | wc	it show number of infra job is running on particular node
+service tomcat status	tomcat service status
+service tomcat restart	restart tomcat services
+/opt/mapr/hadoop/hadoop-2.7.0/etc/hadoop/yarn-site.xml	yarn-site.xml file location
+for i in {2,3,4,5,6,7,8}; do scp /opt/mapr/hadoop/hadoop-2.7.0/etc/hadoop/yarn-site.xml 10.102.20.2$i:/opt/mapr/hadoop/hadoop-2.7.0/etc/hadoop/yarn-site.xml;done	copy yarn site-site.xml file to all nodes from node1
+nslookup node ip	nslookup 10.102.20.21 (  node IP mention here)
+free -g	display total and available memory in gigabytes
+ls -l /dev/sd*	display the currently available disks
+df /dev/sda	check the available disk space
+	
+opt/mapr/bin/hadoop fs -ls /	Accessing the File System
+scp 	copy anything to scp 
+/mapr localhost(rw) 10.102.21.0/24(rw) 10.102.20.0/24(rw) 172.20.22.67(rw) 172.20.20.77(rw) 10.103.20.10/24(rw) 127.0.0.1(rw) 	/opt/mapr/conf then edit exports   
+	
+ hadoop fs -du -s -h /mapr/Prod.Sebi.Gov.In/Data_Load/FACT_ORDERS	to check size of folder ( FCT_ORDERS)
+yarn logs -applicationId application_1653694764663_8665	yarn logs 
+/opt/mapr/spark/spark-2.4.4/bin/spark-submit --master yarn --deploy-mode cluster cluster_test_python.py	run in cluster mode
+maprcli node list -columns racktopo	to check node list
+hadoop fs -df -h  /mapr/prod.sebi.gov.in/	to check volume spce 
+du -sh -h *.*	to check all production follder space 
+maprcli volume info -name users -json 	to check specific user space 
+du -sh  *	To check all current folder files space 
+sudo systemctl restart mapr-zookeeper	Restart ZK service
+/opt/mapr/bin/maprcli node services -name hoststats -action start -nodes spcdcsvrddnd02.sebi.gov.in	Start the hoststats
+/opt/mapr/bin/maprcli node services -name hoststats -action start -nodes spcdcsvrddnd02.sebi.gov.in	Stop the hoststats
+udo netstat -tulpen | grep 1111	Check if the service is still running or not
+/opt/mapr/zookeeper/zookeeper-3.5.6/bin/zkCli.sh -server localhost:5181	connect to ZK as shown below and check if hoststats exists
+	
+	
+	
+	
+	
+	
+	
+	
+	
+maprcli node list -filter '[csvc==hoststats]' -columns service	Check service status
+maprcli service list -node `hostname -f`	Check service status
+ maprcli node services -name cldb -action stop -nodes mapr-<node>	stop CLDB
+rm -rf	Delete folder 
+rm -f 	Delete file 
+ls -lRUsi  >>	filelist with recent use  time and date 
+/opt/mapr/initscripts/zookeeper status	Zookeeper status
+/opt/mapr/initscripts/zookeeper qstatus	Zookeeper status
+service mapr-zookeeper start /stop	Zookeeper stop / start
+yum repolist	Internet connection on server
+ps -ef | grep hive	How many how process ongoing
+ps -ef | grep HiveServer2	How many how process ongoing
+/opt/mapr/hive/hive-2.3/conf/hive-env.sh  	Update below mention line on following path to increase heap size  
+if [ "$SERVICE" = "hiveserver2" ]; then #For hiveserver2	
+   export HADOOP_CLIENT_OPTS="$HADOOP_CLIENT_OPTS -Xmx2048m"	
+fi 	
+hive --service beeline	beeline service connect
+!connect jdbc:hive2://spcdcsvrdnp01.sebi.gov.in:5181,spcdcsvrdnp02.sebi.gov.in:5181,spcdcsvrdnp05.sebi.gov.in:5181,spcdcsvrdnp06.sebi.gov.in:5181,spcdcsvrdnp07.sebi.gov.in:5181/default;ssl=true;saslQop=auth-conf;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2;TrustStore=/opt/mapr/conf/ssl_truststore;TrustStorePassword=mapr123	zookeeper node check
+show databases	hive status check
+hadoop mfs -ls /mapr/Prod.Sebi.Gov.In/DATA_UNLOAD_FOR_HIVE_DATE_WISE/AGG_CLNT_PAIR_TIME/AGG_CLNT_PAIR_TIME_2022_09.CSV	File wise replication details 
+maprcli node list -columns svc,racktopo	No nodes in volume totpology 
+maprcli alarm list	To check alarms through CLI
+mount localhost:/mapr /mapr	Prod mapr mount
+mount localhost:/mapr /maprdev	Dev mapr mount 
+/opt/mapr/bin/maprcli node maintenance -nodes <IP|hostname> -timeoutminutes <minutes>	Node under maintenance commond 
+maprcli node maintenance -nodes <IP | Username > -timeoutminutes 0	Node out of maintenance commond 
+hadoop job -list	live running jobs 
+hadoop job -kill job_<Job Id>	Hive job kill
+/opt/mapr/bin/gfsck rwvolume=<volume-name> -r	To clear volume alarms 
+maprcli volume remove -name <node5-local-volume-name-on-which-alarm-coming> -force	To clear volume alarms according to name 
+!connect jdbc:hive2:// spcdcsvrddnd02.sebi.gov.in:10000/default;auth=maprsasl;ss=true	Connection string hive beeline dev
+sh -x  /opt/mapr/server/createsystemvolumes.sh	Volume creation script after volume delete
+maprcli volume list -columns volumeid,volumeowner,volumename,volumeaename,volumeaetype,volumeschedule,volumetype -nodes 10.102.20.25	Specific each volume node list check
+maprcli volume remove -name mapr.spcdcsvrdnp05.sebi.gov.in.local.metrics	local volume delete 
+maprcli volume remove -name <node5-local-volume-name-on-which-alarm-coming> -force_________	Local volume delete 2
+/opt/mapr/bin/gfsck rwvolume=<volume-name> -r__________	To remove or ignore volume related alarams 
+maprcli alarm clearall	_________To clear all alarms 
+hadoop job -list____________	To check running jobs with putty
+hadoop job -kill job_	____________To kill specific job with job id 
+hadoop fs -rm maprfs:///Order_Loading/landing/nseed/*20102022*.csv	_______________Hadoop file delete commond 
+/opt/mapr/support/tools/mapr-support-dump.sh_____________ --no-hadoop-logs	Support dump collect
