@@ -132,3 +132,6 @@ hadoop job -list____________	To check running jobs with putty
 hadoop job -kill job_	____________To kill specific job with job id 
 hadoop fs -rm maprfs:///Order_Loading/landing/nseed/*20102022*.csv	_______________Hadoop file delete commond 
 /opt/mapr/support/tools/mapr-support-dump.sh_____________ --no-hadoop-logs	Support dump collect
+maprcli volume info -name volumename -json________________________Volume replication details
+/opt/mapr/server/fsck -r -n SP2______________FSCK Repair commond 
+/opt/mapr/server/mrconfig sp list -v ____________________To check sp list
