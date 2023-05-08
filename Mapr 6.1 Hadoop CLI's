@@ -8,7 +8,6 @@ ps uax |grep -i   _________   mapr	to check services is running
 iptables -L__________	to check a command line interface used to set up and maintain tables for the Netfilter firewall for ipv4
 service sshd status ________	to check the services status
 getenforce	a Linux Commnand for quick confirmation of the current SELinux mode
-	
 jps__________	current running application 
 rpm -qa | grep lftp_________	to check file 
 netstat -na grep 22	__________port check
