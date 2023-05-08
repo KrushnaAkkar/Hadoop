@@ -1,4 +1,5 @@
-jps	___________current running application 
+jps ___________current running application
+wq! ____________ Save edit and force.
 rpm -qa | grep lftp___________	to check file 
 netstat -na grep 22___________	port check
 sftp -o Port=6010 sebisftp@172.20.106.23:/data3	Sftp command
