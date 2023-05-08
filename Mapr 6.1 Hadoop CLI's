@@ -64,11 +64,9 @@ nslookup node ip	nslookup 10.102.20.21 (  node IP mention here)
 free -g	display total and available memory in gigabytes
 ls -l /dev/sd*	display the currently available disks
 df /dev/sda	check the available disk space
-	
 opt/mapr/bin/hadoop fs -ls /	Accessing the File System
 scp 	copy anything to scp 
-/mapr localhost(rw) 10.102.21.0/24(rw) 10.102.20.0/24(rw) 172.20.22.67(rw) 172.20.20.77(rw) 10.103.20.10/24(rw) 127.0.0.1(rw) 	/opt/mapr/conf then edit exports   
-	
+/mapr localhost(rw) 10.102.21.0/24(rw) 10.102.20.0/24(rw) 172.20.22.67(rw) 172.20.20.77(rw) 10.103.20.10/24(rw) 127.0.0.1(rw) 	/opt/mapr/conf then edit exports   	
  hadoop fs -du -s -h /mapr/Prod.Sebi.Gov.In/Data_Load/FACT_ORDERS	to check size of folder ( FCT_ORDERS)
 yarn logs -applicationId application_1653694764663_8665	yarn logs 
 /opt/mapr/spark/spark-2.4.4/bin/spark-submit --master yarn --deploy-mode cluster cluster_test_python.py	run in cluster mode
@@ -108,7 +106,7 @@ mount localhost:/mapr /mapr	Prod mapr mount
 mount localhost:/mapr /maprdev	Dev mapr mount 
 /opt/mapr/bin/maprcli node maintenance -nodes <IP|hostname> -timeoutminutes <minutes>	Node under maintenance commond 
 maprcli node maintenance -nodes <IP | Username > -timeoutminutes 0	Node out of maintenance commond 
-hadoop job -list	live running jobs 
+hadoop job -list     live running jobs 
 hadoop job -kill job_<Job Id>	Hive job kill
 /opt/mapr/bin/gfsck rwvolume=<volume-name> -r	To clear volume alarms 
 maprcli volume remove -name <node5-local-volume-name-on-which-alarm-coming> -force	To clear volume alarms according to name 
