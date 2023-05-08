@@ -81,16 +81,7 @@ sudo systemctl restart mapr-zookeeper	Restart ZK service
 /opt/mapr/bin/maprcli node services -name hoststats -action start -nodes spcdcsvrddnd02.sebi.gov.in	Start the hoststats
 /opt/mapr/bin/maprcli node services -name hoststats -action start -nodes spcdcsvrddnd02.sebi.gov.in	Stop the hoststats
 udo netstat -tulpen | grep 1111	Check if the service is still running or not
-/opt/mapr/zookeeper/zookeeper-3.5.6/bin/zkCli.sh -server localhost:5181	connect to ZK as shown below and check if hoststats exists
-	
-	
-	
-	
-	
-	
-	
-	
-	
+/opt/mapr/zookeeper/zookeeper-3.5.6/bin/zkCli.sh -server localhost:5181	connect to ZK as shown below and check if hoststats exists	
 maprcli node list -filter '[csvc==hoststats]' -columns service	Check service status
 maprcli service list -node `hostname -f`	Check service status
  maprcli node services -name cldb -action stop -nodes mapr-<node>	stop CLDB
